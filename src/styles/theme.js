@@ -44,19 +44,31 @@ const theme = {
     white: '#ffffff',
   },
   colors: {
+    priority: {
+      low: '#6BD475',
+      medium: '#E2A300',
+      high: '#FF2B77',
+    },
+
+    white: '#FFFFFF',
     purple: '#7B61FF',
-    pink: '#FF2B77',
+    red: '#FF2B77',
     yellow: '#E2A300',
     green: '#6BD475',
     darkGray: '#3F3F3F',
     lightGray: '#ACA7C3',
 
     mainText: '#3F3F3F',
+    secodText: '#49454f',
     placeholder: '#888888',
     hover: '#6243FF',
 
+    buttonMainColor: '#7B61FF',
+    buttonHoverColor: '#6243FF',
+    buttonDisableColor: '#ACA7C3',
+
     logo: '#7B61FF',
-    red: 'tomato',
+    line: 'tomato',
   },
 };
 
