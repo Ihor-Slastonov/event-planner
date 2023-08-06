@@ -14,14 +14,18 @@ import {
   CardEventAbout,
   CardEventAboutWrapper,
 } from './EventCard.styled';
+import { useNavigate } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
   const { id, title, about, imageUrl, category, priority, date, time, city } =
     event;
 
   const [isHover, setIsHover] = useState(false);
+  const navigate = useNavigate();
 
   const onMouseHover = () => setIsHover(prev => !prev);
+
+  const onEventButtonClick = id => navigate(`/event/${id}`);
 
   return (
     <CardWrapper
@@ -51,7 +55,11 @@ const EventCard = ({ event }) => {
 
         <CardEventAboutWrapper data-hovered={isHover}>
           <CardEventAbout data-hovered={isHover}>{about}</CardEventAbout>
-          {isHover && <Button $ml="auto">More info</Button>}
+          {isHover && (
+            <Button handleClick={() => onEventButtonClick(id)} $ml="auto">
+              More info
+            </Button>
+          )}
         </CardEventAboutWrapper>
       </BottomCardWrapper>
     </CardWrapper>

@@ -1,10 +1,8 @@
-import { Toaster } from 'react-hot-toast';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import SharedLayout from '../SharedLayout/SharedLayout';
 import { lazy } from 'react';
-// import HomePage from '../../pages/HomePage/HomePage';
-// import CreateEventPage from '../../pages/CreateEventPage/CreateEventPage';
-// import EventPage from '../../pages/EventPage/EventPage';
+import { Navigate, Route, Routes } from 'react-router-dom';
+
+import { Toaster } from 'react-hot-toast';
+import SharedLayout from '../SharedLayout/SharedLayout';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const CreateEventPage = lazy(() =>
@@ -19,7 +17,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="create-event" element={<CreateEventPage />} />
-          <Route path="event" element={<EventPage />} />
+          <Route path="event/:eventId" element={<EventPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
