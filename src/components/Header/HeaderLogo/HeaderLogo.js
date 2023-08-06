@@ -1,7 +1,11 @@
 import { Logo } from './HeaderLogo.styled';
 
 const HeaderLogo = () => {
-  return <Logo href="/">Event Planner</Logo>;
+  return (
+    <h1>
+      <Logo href="/">Event Planner</Logo>
+    </h1>
+  );
 };
 
 export default HeaderLogo;

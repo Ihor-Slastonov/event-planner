@@ -37,6 +37,7 @@ const EventCard = ({ event }) => {
         src={require(`../../images/events/${imageUrl}`)}
         width="332"
         alt={title}
+        loading="lazy"
       />
       <ChipsWrapper>
         <CategoryChip>{category}</CategoryChip>
