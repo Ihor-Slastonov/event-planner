@@ -19,7 +19,7 @@ const SearchBar = () => {
   const onFormSubmit = e => {
     e.preventDefault();
     const value = inputValue.trim();
-    if (value === '') return toast.custom('The input field must be non-empty');
+    if (value === '') return toast.error('The input field must be non-empty');
     console.log(value);
   };
 
