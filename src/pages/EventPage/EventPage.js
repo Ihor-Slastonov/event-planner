@@ -38,7 +38,7 @@ const EventPage = () => {
     };
 
     getEventById(eventId);
-  }, [eventId]);
+  }, [eventId, navigate]);
 
   return (
     <StyledSection>
