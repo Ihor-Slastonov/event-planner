@@ -12,6 +12,11 @@ const fetchEventById = async id => {
   return response.data;
 };
 
-const eventsApi = { fetchAllEvents, fetchEventById };
+const deleteEventById = async id => {
+  const response = await axios.delete(`${BASE_URL}/${id}`);
+  return response.data;
+};
+
+const eventsApi = { fetchAllEvents, fetchEventById, deleteEventById };
 
 export default eventsApi;

@@ -16,8 +16,14 @@ const getPriorityStyles = priority => {
   }
 };
 
+export const EventContainer = styled.div`
+  ${({ theme }) => theme.breakpoints.desktop} {
+    margin: 0 auto;
+    width: 628px;
+  }
+`;
+
 export const EventTitle = styled.h2`
-  margin-top: 24px;
   margin-bottom: 24px;
 
   color: ${({ theme }) => theme.colors.mainText};
@@ -25,10 +31,23 @@ export const EventTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.medium.xs};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   line-height: 1;
+
+  /* tablet */
+  ${({ theme }) => theme.breakpoints.tablet} {
+    font-size: ${({ theme }) => theme.fontSize.medium.m};
+  }
+
+  /* desktop */
+  ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 14px;
+  }
 `;
 
 export const EventWrapper = styled.div`
   padding-bottom: 40px;
+
+  box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+  border-radius: 8px;
   background-color: ${({ theme }) => theme.backgroundColors.white};
 `;
 
@@ -45,6 +64,19 @@ export const ImageWrapper = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  /* tablet */
+  ${({ theme }) => theme.breakpoints.tablet} {
+    width: 688px;
+    height: 272px;
+  }
+
+  /* desktop */
+  ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 20px;
+    width: 628px;
+    height: 272px;
+  }
 `;
 
 export const EventAbout = styled.p`
@@ -56,6 +88,16 @@ export const EventAbout = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small.s};
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   line-height: 1.42;
+
+  /* tablet */
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 0 24px;
+  }
+  /* desktop */
+  ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 12px;
+    padding: 0 16px 0 10px;
+  }
 `;
 export const EventInfoChipsWrapper = styled.div`
   display: flex;
@@ -64,6 +106,16 @@ export const EventInfoChipsWrapper = styled.div`
   gap: 12px;
   padding: 0 16px;
   margin-bottom: 40px;
+
+  /* tablet */
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 0 24px;
+  }
+  /* desktop */
+  ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 24px;
+    padding: 0 16px 0 10px;
+  }
 `;
 
 export const EventInfoChip = styled.span`
@@ -88,8 +140,13 @@ export const EventInfoChipPriority = styled(EventInfoChip)`
 export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: end;
   padding: 0 16px;
   gap: 22px;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 0 40px;
+  }
 `;
 
 export const DeleteButton = styled.button`

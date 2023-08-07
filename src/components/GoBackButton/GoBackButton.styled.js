@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 
 export const StyldeButton = styled(Link)`
+  margin-bottom: 24px;
   display: inline-flex;
   align-items: center;
   gap: 8px;

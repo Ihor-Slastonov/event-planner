@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { toast } from 'react-hot-toast';
 import eventsApi from '../../services/eventsApi';
@@ -15,6 +15,7 @@ const EventPage = () => {
   const [event, setEvent] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
+  const navigate = useNavigate();
   const params = useParams();
   const { eventId } = params;
 
@@ -23,7 +24,10 @@ const EventPage = () => {
       try {
         setIsLoading(true);
         const event = await eventsApi.fetchEventById(id);
-        if (event.length === 0) return toast.error('Event not found');
+        if (event.length === 0) {
+          toast.error('Event not found');
+          return navigate('/');
+        }
 
         setEvent(event[0]);
       } catch (error) {
