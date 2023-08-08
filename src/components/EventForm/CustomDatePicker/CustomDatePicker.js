@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { toast } from 'react-hot-toast';
 import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 import { FiChevronDown } from 'react-icons/fi';
@@ -20,25 +19,19 @@ import {
 } from './CustomDatePicker.styled';
 
 const CustomDatePicker = ({ name, label, value, onChange }) => {
-  const [selectedDay, setSelectedDay] = useState(value ? value : null);
   const [isOpen, setIsOpen] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
 
   const onButtonClick = () => setIsOpen(prev => !prev);
 
-  const onSelectedDay = date => {
-    const formatedDate = dayPickerFormatDate(date);
-    setSelectedDay(formatedDate);
-  };
-
   const onConfirmButtonClick = () => {
-    if (selectedDay === null || selectedDay === '')
-      return toast.error('Select a day');
+    const formatedDate = dayPickerFormatDate(startDate);
     setIsOpen(false);
-    onChange(selectedDay);
+    onChange(formatedDate);
   };
 
   const onCancelButtonClick = () => {
-    setSelectedDay(null);
+    onChange(null);
     setIsOpen(false);
   };
 
@@ -65,18 +58,18 @@ const CustomDatePicker = ({ name, label, value, onChange }) => {
         <DayPickerButton
           type="button"
           data-open={isOpen}
-          data-selected={selectedDay !== null}
+          data-selected={value !== null}
           onClick={onButtonClick}
         >
-          {selectedDay ? selectedDay : 'Select Date'}
+          {value ? value : 'Select Date'}
           <FiChevronDown size={24} color="#7B61FF" />
         </DayPickerButton>
 
         <DropDown data-open={isOpen}>
           <DayPicker
             mode="single"
-            selected={selectedDay}
-            onSelect={onSelectedDay}
+            selected={startDate}
+            onSelect={setStartDate}
             required
             classNames={styles}
             formatters={{ formatWeekdayName }}
