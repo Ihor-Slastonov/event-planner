@@ -32,7 +32,7 @@ export const Form = styled.form`
   }
 
   ${({ theme }) => theme.breakpoints.desktop} {
-    height: 280px;
+    height: 286px;
     gap: 20px 42px;
   }
 `;
