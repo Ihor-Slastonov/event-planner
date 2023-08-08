@@ -27,9 +27,8 @@ export const SelectButton = styled.button`
   background: #fff;
 
   color: ${({ 'data-open': open }) => (!open ? '#3f3f3f' : '#7b61ff')};
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.m};
   line-height: 1.5;
 
   cursor: pointer;
@@ -64,13 +63,13 @@ export const OptionList = styled.ul`
 
 export const Option = styled.li`
   padding: 16px 0;
-
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.m};
 
   border-bottom: 1px solid #aca7c3;
   color: #3f3f3f;
+  cursor: pointer;
+  transition: color 400ms ease-in-out;
 
   &:first-of-type {
     padding-top: 0;
@@ -80,16 +79,8 @@ export const Option = styled.li`
     border-bottom: none;
   }
 
-  cursor: pointer;
-
-  transition: color 400ms ease-in-out;
-
   &:hover,
   :focus {
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-
-    color: #7b61ff;
+    color: ${({ theme }) => theme.colors.purple};
   }
 `;

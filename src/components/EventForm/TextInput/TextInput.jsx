@@ -52,7 +52,7 @@ const TextInput = ({
             maxLength={400}
             data-text={value !== ''}
             data-invalid={checkInputValidation(value)}
-            pattern="^(?!\.)[a-zA-Z0-9.]+.*$"
+            pattern="^(?!\.)[a-zA-Z0-9.\s]+.*$"
             required
           />
         )}
