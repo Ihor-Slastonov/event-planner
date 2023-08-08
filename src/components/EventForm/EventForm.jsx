@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import eventsApi from '../../services/eventsApi';
 import formatDate from '../utils/formatDate';
@@ -25,6 +26,7 @@ const CreateEventForm = () => {
   const [priority, setPriority] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const onTitleChange = e => setTitle(e.currentTarget.value);
   const onDescriptionChange = e => setDescription(e.currentTarget.value);
@@ -83,6 +85,7 @@ const CreateEventForm = () => {
       cleanForm();
       setIsLoading(false);
       toast.success('The event has been successfully created');
+      navigate('/');
     }
   };
   return (
