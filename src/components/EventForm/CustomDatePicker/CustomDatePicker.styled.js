@@ -73,8 +73,8 @@ export const ActionsWrapper = styled.div`
 `;
 
 export const ConfirmButton = styled.button`
-  padding: 8px 16px;
-  min-width: 108px;
+  padding: 8px 14px;
+  min-width: 75px;
 
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
@@ -94,6 +94,10 @@ export const ConfirmButton = styled.button`
   }
 
   cursor: pointer;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 8px 16px;
+  }
 `;
 export const CancelButton = styled(ConfirmButton)`
   background-color: ${({ theme }) => theme.backgroundColors.white};
