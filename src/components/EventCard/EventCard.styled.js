@@ -117,4 +117,11 @@ export const CardEventAbout = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small.s};
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   line-height: 1.42;
+
+  max-height: 4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 `;
