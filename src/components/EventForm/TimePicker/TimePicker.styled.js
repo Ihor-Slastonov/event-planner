@@ -6,7 +6,7 @@ export const TimeWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tablet} {
     width: 308px;
   }
-    ${({ theme }) => theme.breakpoints.desktop} {
+  ${({ theme }) => theme.breakpoints.desktop} {
     width: 372px;
   }
 `;
@@ -16,7 +16,6 @@ export const Input = styled.input`
   padding: 16px 12px;
   margin-top: 8px;
   height: 56px;
-
 
   border-radius: 8px;
   border: ${({ 'data-text': text, 'data-invalid': invalid }) =>

@@ -4,7 +4,6 @@ export const StyledContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
-  /* outline: 1px solid ${({ theme }) => theme.colors.red}; */
 
   /* mobile */
   ${({ theme }) => theme.breakpoints.mobile} {

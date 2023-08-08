@@ -1,10 +1,7 @@
 import Container from '../Container/Container';
 import LanguageSelect from '../LanguageSelect/LanguageSelect';
 import SearchBar from '../SearchBar/SearchBar';
-import {
-  StyledHeader,
-  HeaderWrapper,
-} from './Header.styled';
+import { StyledHeader, HeaderWrapper } from './Header.styled';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
 
 const Header = () => {

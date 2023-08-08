@@ -21,7 +21,6 @@ export const SelectButton = styled.button`
   margin-top: 8px;
   height: 56px;
 
-
   border-radius: 8px;
   border: ${({ 'data-value': value }) =>
     !value ? '1px solid #aca7c3' : '1px solid #7b61ff'};

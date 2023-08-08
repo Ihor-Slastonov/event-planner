@@ -17,8 +17,17 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
-  const { id, title, description, imageUrl, category, priority, date, time, location } =
-    event;
+  const {
+    id,
+    title,
+    description,
+    imageUrl,
+    category,
+    priority,
+    date,
+    time,
+    location,
+  } = event;
 
   const [isHover, setIsHover] = useState(false);
   const navigate = useNavigate();
