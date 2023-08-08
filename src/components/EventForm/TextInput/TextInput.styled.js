@@ -20,6 +20,10 @@ export const Input = styled.input`
   margin-top: 8px;
   height: 56px;
 
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.m};
+  line-height: 1.5;
+
   border-radius: 8px;
   border: ${({ 'data-text': text, 'data-invalid': invalid }) =>
     !text
@@ -74,10 +78,8 @@ export const InvalidInfoText = styled.p`
   transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
   color: #ff2b77;
   text-align: right;
-  font-family: Poppins, sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.xs};
   line-height: 1.33;
 `;
 
@@ -88,6 +90,9 @@ export const TextAria = styled.textarea`
   padding: 16px 12px;
   margin-top: 8px;
 
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.m};
+  line-height: 1.5;
   border: ${({ 'data-text': text, 'data-invalid': invalid }) =>
     !text
       ? '1px solid #aca7c3 '

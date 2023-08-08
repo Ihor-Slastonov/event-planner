@@ -17,6 +17,8 @@ export const Input = styled.input`
   margin-top: 8px;
   height: 56px;
 
+  font-family: ${({ theme }) => theme.fonts.Poppins};
+  font-size: ${({ theme }) => theme.fontSize.small.m};
   border-radius: 8px;
   border: ${({ 'data-text': text, 'data-invalid': invalid }) =>
     !text

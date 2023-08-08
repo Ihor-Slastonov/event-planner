@@ -126,12 +126,15 @@ export const EventInfoChip = styled.span`
   font-size: ${({ theme }) => theme.fontSize.small.s};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   line-height: 1.42;
-  text-transform: capitalize;
 
   color: ${({ theme }) => theme.colors.purple};
   border-radius: 8px;
   background-color: ${({ theme }) => theme.backgroundColors.white};
   box-shadow: 4px 5px 9px 0px rgba(166, 141, 174, 0.28);
+
+  &:not(:last-of-type) {
+    text-transform: capitalize;
+  }
 `;
 
 export const EventInfoChipPriority = styled(EventInfoChip)`

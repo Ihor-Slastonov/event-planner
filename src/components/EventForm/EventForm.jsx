@@ -65,14 +65,14 @@ const CreateEventForm = () => {
     }
 
     const newEvent = {
-      title,
-      description,
+      title: title.trim(),
+      description: title.trim(),
       imageUrl: 'placeholder.png',
       category,
       priority,
       date,
       time: formatTime(time),
-      location,
+      location: location.trim(),
     };
 
     try {
