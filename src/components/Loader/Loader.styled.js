@@ -9,5 +9,4 @@ export const LoaderWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tablet} {
     top: 100px;
   }
-  /* d */
 `;
