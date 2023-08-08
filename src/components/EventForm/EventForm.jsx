@@ -66,7 +66,7 @@ const CreateEventForm = () => {
 
     const newEvent = {
       title: title.trim(),
-      description: title.trim(),
+      description: description.trim(),
       imageUrl: 'placeholder.png',
       category,
       priority,
