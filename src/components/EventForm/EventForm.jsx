@@ -2,14 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import eventsApi from '../../services/eventsApi';
-import formatDate from '../utils/formatDate';
 import formatTime from '../utils/formatTime';
 
 import TextInput from './TextInput/TextInput';
 import Select from './Select/Select';
 import categories from '../../data/categories';
 import priorities from '../../data/priorities';
-import DatePicker from './DatePicker/DatePicker';
 import TimePicker from './TimePicker/TimePicker';
 
 import { Form, FormButton, FormWrapper } from './EventForm.styled';
@@ -20,7 +18,7 @@ import CustomDatePicker from './CustomDatePicker/CustomDatePicker';
 const CreateEventForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(null);
   const [time, setTime] = useState('');
   const [location, setLocation] = useState('');
   const [category, setCategory] = useState(null);
@@ -31,7 +29,7 @@ const CreateEventForm = () => {
 
   const onTitleChange = e => setTitle(e.currentTarget.value);
   const onDescriptionChange = e => setDescription(e.currentTarget.value);
-  const onDateChange = e => setDate(e.currentTarget.value);
+  const onDateChange = value => setDate(value);
   const onTimeChange = e => setTime(e.currentTarget.value);
   const onLocationChange = e => setLocation(e.currentTarget.value);
   const onCategoryChange = value => setCategory(value);
@@ -72,7 +70,7 @@ const CreateEventForm = () => {
       imageUrl: 'placeholder.png',
       category,
       priority,
-      date: formatDate(date),
+      date,
       time: formatTime(time),
       location,
     };
@@ -94,9 +92,6 @@ const CreateEventForm = () => {
       {isLoading && <Loader />}
       <FormWrapper>
         <Form onSubmit={onSubmit} autoComplete="off">
-          
-          <CustomDatePicker />
-
           {/* Title */}
 
           <TextInput
@@ -119,8 +114,7 @@ const CreateEventForm = () => {
           />
 
           {/* Date */}
-
-          <DatePicker
+          <CustomDatePicker
             label="Select Date"
             name="date"
             value={date}
