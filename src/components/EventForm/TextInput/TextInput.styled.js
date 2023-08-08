@@ -16,7 +16,7 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  padding: 16px 12px;
+  padding: 16px 36px 16px 12px;
   margin-top: 8px;
   height: 56px;
 
@@ -87,7 +87,8 @@ export const TextAria = styled.textarea`
   width: 100%;
   height: 156px;
 
-  padding: 16px 12px;
+  padding: 16px 36px 16px 12px;
+
   margin-top: 8px;
 
   font-family: ${({ theme }) => theme.fonts.Poppins};

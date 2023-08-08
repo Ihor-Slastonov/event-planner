@@ -1,0 +1,81 @@
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.caption {
+  position: relative;
+  margin-bottom: 24px;
+
+  color: #3f3f3f;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navButton {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.week {
+  padding-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #3f3f3f;
+}
+.week:first-of-type,
+.week:last-of-type {
+  color: #ff2b77;
+}
+
+.row {
+  height: 32px;
+  margin-bottom: 4px;
+}
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+.cell {
+  padding: 0;
+  text-align: center;
+}
+
+.day {
+  width: 28.5px;
+  height: 32px;
+  padding: 8px;
+
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #aca7c3;
+
+  border: transparent;
+  background-color: white;
+  cursor: pointer;
+}
+
+.today {
+  color: #7b61ff;
+  font-weight: 600;
+}
+
+.selected {
+  background-color: #7b61ff;
+  color: #ffffff;
+}
