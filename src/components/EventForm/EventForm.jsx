@@ -15,6 +15,7 @@ import TimePicker from './TimePicker/TimePicker';
 import { Form, FormButton, FormWrapper } from './EventForm.styled';
 import { toast } from 'react-hot-toast';
 import Loader from '../Loader/Loader';
+import CustomDatePicker from './CustomDatePicker/CustomDatePicker';
 
 const CreateEventForm = () => {
   const [title, setTitle] = useState('');
@@ -93,6 +94,9 @@ const CreateEventForm = () => {
       {isLoading && <Loader />}
       <FormWrapper>
         <Form onSubmit={onSubmit} autoComplete="off">
+          
+          <CustomDatePicker />
+
           {/* Title */}
 
           <TextInput
