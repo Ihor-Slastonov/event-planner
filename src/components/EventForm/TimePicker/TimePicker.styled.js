@@ -20,12 +20,9 @@ export const Input = styled.input`
   font-family: ${({ theme }) => theme.fonts.Poppins};
   font-size: ${({ theme }) => theme.fontSize.small.m};
   border-radius: 8px;
-  border: ${({ 'data-text': text, 'data-invalid': invalid }) =>
-    !text
-      ? '1px solid #aca7c3 '
-      : !invalid
-      ? '1px solid #7b61ff'
-      : '1px solid #FF2B77'};
+  border: 1px solid #aca7c3;
 
   outline: transparent;
+
+  ${({ value }) => value !== '' && `border: 1px solid #7b61ff;`}
 `;
