@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Galery Opening",
+    "description": "Discover an enchanting evening celebrating the world of art at our exclusive gallery opening.",
+    "imageUrl": "gallery.png",
+    "category": "art",
+    "priority": "high",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "2",
+    "title": "Innovation Summit",
+    "description": "Engage in a thought-provoking journey of knowledge and collaboration at our Innovation Summit. ",
+    "imageUrl": "innovation.png",
+    "category": "conference",
+    "priority": "medium",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "3",
+    "title": "Empower Your Creativity",
+    "description": "Ignite your creativity and nurture your storytelling skills in our immersive Creative Writing Workshop. ",
+    "imageUrl": "workshop.png",
+    "category": "workshop",
+    "priority": "high",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "4",
+    "title": "Summer Soiree",
+    "description": "Embrace the tropical vibes and escape to paradise at our Beach Luau Extravaganza.",
+    "imageUrl": "party.png",
+    "category": "party",
+    "priority": "high",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "5",
+    "title": "Leadership Conference",
+    "description": "Unlock the secrets of effective leadership at our transformative Success Leadership Conference.",
+    "imageUrl": "conference.png",
+    "category": "business",
+    "priority": "medium",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "6",
+    "title": "Tech Startup Showcase",
+    "description": "Witness the future of technology as innovative startups showcase their groundbreaking ideas.",
+    "imageUrl": "startup.png",
+    "category": "workshop",
+    "priority": "low",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "7",
+    "title": "Acoustic Garden Concert",
+    "description": "Experience the magic of live music amidst the serene beauty of nature at our Acoustic Garden Concert.",
+    "imageUrl": "concert.png",
+    "category": "music",
+    "priority": "high",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  },
+  {
+    "id": "8",
+    "title": "Extreme Adventure Race",
+    "description": "Calling all thrill-seekers! Embark on an adrenaline-pumping journey at our Extreme Adventure Race.",
+    "imageUrl": "race.png",
+    "category": "sport",
+    "priority": "low",
+    "date": "12.07",
+    "time": "12:00",
+    "location": "Kyiv"
+  }
+]

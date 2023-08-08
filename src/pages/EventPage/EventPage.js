@@ -9,7 +9,7 @@ import Container from '../../components/Container/Container';
 import Event from '../../components/Event/Event';
 import Loader from '../../components/Loader/Loader';
 
-import { StyledSection } from './EventPage.styled';
+import { Section } from './EventPage.styled';
 
 const EventPage = () => {
   const [event, setEvent] = useState({});
@@ -41,13 +41,13 @@ const EventPage = () => {
   }, [eventId, navigate]);
 
   return (
-    <StyledSection>
+    <Section>
       <Container>
         <GoBackButton />
         {!isLoading && <Event event={event} />}
         {isLoading && <Loader />}
       </Container>
-    </StyledSection>
+    </Section>
   );
 };
 

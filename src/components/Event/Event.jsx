@@ -37,7 +37,7 @@ const Event = ({ event }) => {
     }
   };
 
-  const { id, title, about, imageUrl, category, priority, date, time, city } =
+  const { id, title, description, imageUrl, category, priority, date, time, location } =
     event;
   return (
     <>
@@ -56,14 +56,14 @@ const Event = ({ event }) => {
             </ImageWrapper>
           )}
 
-          <EventAbout>{about}</EventAbout>
+          <EventAbout>{description}</EventAbout>
 
           <EventInfoChipsWrapper>
             <EventInfoChip>{category}</EventInfoChip>
             <EventInfoChipPriority data-priority={priority}>
               {priority}
             </EventInfoChipPriority>
-            <EventInfoChip>{city}</EventInfoChip>
+            <EventInfoChip>{location}</EventInfoChip>
             <EventInfoChip>
               {date} at {time}
             </EventInfoChip>

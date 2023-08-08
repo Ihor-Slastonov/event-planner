@@ -17,7 +17,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
-  const { id, title, about, imageUrl, category, priority, date, time, city } =
+  const { id, title, description, imageUrl, category, priority, date, time, location } =
     event;
 
   const [isHover, setIsHover] = useState(false);
@@ -49,13 +49,13 @@ const EventCard = ({ event }) => {
           <InfoText>
             {date} at {time}
           </InfoText>
-          <InfoText>{city}</InfoText>
+          <InfoText>{location}</InfoText>
         </InfoWrapper>
 
         <CardEventTitle>{title}</CardEventTitle>
 
         <CardEventAboutWrapper data-hovered={isHover}>
-          <CardEventAbout data-hovered={isHover}>{about}</CardEventAbout>
+          <CardEventAbout data-hovered={isHover}>{description}</CardEventAbout>
           {isHover && (
             <Button handleClick={() => onEventButtonClick(id)} $ml="auto">
               More info

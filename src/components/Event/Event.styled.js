@@ -1,15 +1,15 @@
 import { styled, css } from 'styled-components';
 
 const getPriorityStyles = priority => {
-  if (priority === 'Low') {
+  if (priority === 'low') {
     return css`
       color: ${({ theme }) => theme.colors.priority.low};
     `;
-  } else if (priority === 'Medium') {
+  } else if (priority === 'medium') {
     return css`
       color: ${({ theme }) => theme.colors.priority.medium};
     `;
-  } else if (priority === 'High') {
+  } else if (priority === 'high') {
     return css`
       color: ${({ theme }) => theme.colors.priority.high};
     `;
@@ -126,6 +126,7 @@ export const EventInfoChip = styled.span`
   font-size: ${({ theme }) => theme.fontSize.small.s};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   line-height: 1.42;
+  text-transform: capitalize;
 
   color: ${({ theme }) => theme.colors.purple};
   border-radius: 8px;

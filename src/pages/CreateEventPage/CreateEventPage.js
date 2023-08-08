@@ -1,9 +1,18 @@
-
+import Container from '../../components/Container/Container';
+import EventForm from '../../components/EventForm/EventForm';
+import GoBackButton from '../../components/GoBackButton/GoBackButton';
+import { PageTitle, Section } from './CreateEventPage.styled';
 
 const CreateEventPage = () => {
   return (
-    <div>CreateEventPage</div>
-  )
-}
+    <Section>
+      <Container>
+        <GoBackButton />
+        <PageTitle>Create new event</PageTitle>
+        <EventForm />
+      </Container>
+    </Section>
+  );
+};
 
-export default CreateEventPage
+export default CreateEventPage;
